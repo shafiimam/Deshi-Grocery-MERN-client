@@ -1,0 +1,36 @@
+.admin-panel{
+    display:flex
+}
+
+.side-bar {
+    background-color: rgb(5, 5, 75);
+    height:100vh;
+    padding:20px
+}
+
+ul{
+    list-style: none;
+    padding:0
+}
+
+li{
+    padding:10px;
+    line-height:1rem;
+    width:100%;
+    border-bottom: 1px solid grey;
+}
+
+li:hover{
+    background-color:rgb(255, 255, 255);
+    transition:0.3s transform ease-in-out;
+    transform:scale(1.1)
+}
+
+@media(max-width:700px){
+    .admin-panel{
+        flex-direction: column;
+    }
+    .side-bar{
+        height:200px;
+    }
+}
