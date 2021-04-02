@@ -8,7 +8,7 @@ const Header = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   return (
-    <Navbar bg="transparent" variant="dark" expand="lg" collapseOnSelect>
+    <Navbar bg="primary" variant="dark" expand="md" collapseOnSelect pd="0" m="0">
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>Deshi Bazar</Navbar.Brand>
@@ -30,12 +30,15 @@ const Header = () => {
                 <Nav.Link>Sign In</Nav.Link>
               </LinkContainer>
             ) : (
-              <Image
+              <Nav.Link>
+                <Image
                 src={loggedInUser.photo}
                 alt={loggedInUser.name}
                 roundedCircle
                 height="30px"
+                className="z-depth-0 ml-sm-3 mb-lg-2"
               ></Image>
+              </Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>

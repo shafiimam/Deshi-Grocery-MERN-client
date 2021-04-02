@@ -15,7 +15,7 @@ const Product = ({ product }) => {
 
         <Card.Body>
           <Card.Title as="div">
-            <strong>{product.name}</strong>
+            <strong>{product.name} - {product.weight}</strong>
           </Card.Title>
           <Card.Text as="span" className="mx-5 ml-auto">${product.price}</Card.Text>
           <LinkContainer to={"product/"+ product.key} className="ml-auto" variant="success"><Button>Buy Now</Button></LinkContainer>

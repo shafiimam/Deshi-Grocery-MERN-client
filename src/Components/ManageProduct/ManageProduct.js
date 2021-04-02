@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Spinner } from "react-bootstrap";
+import { Button, Container, Spinner } from "react-bootstrap";
 import { Table } from "react-bootstrap";
 const ManageProduct = () => {
   const [products, setProducts] = useState([]);
@@ -49,10 +49,10 @@ const ManageProduct = () => {
                 <td>{product.weight}</td>
                 <td>{product.price}</td>
                 <td>
-                  <button>edit</button> &nbsp;{" "}
-                  <button onClick={() => handleDelete(product.key)}>
-                    delete
-                  </button>
+                  <Button variant="warning" outline><i class="bi bi-pencil-square"></i></Button> &nbsp;{" "}
+                  <Button variant="danger" onClick={() => handleDelete(product.key)}>
+                  <i class="bi bi-trash-fill"></i>
+                  </Button>
                 </td>
               </tr>
             ))}

@@ -8,15 +8,16 @@ import ManageProduct from '../ManageProduct/ManageProduct';
 import './Admin.css'
 const Admin = () => {
     return (
-        <Container className="admin-panel">
+        <div className="admin-panel">
            <div className="side-bar">
            <h3>Deshi Bazar </h3>
            <ul>
-               <li><Link style={{textDecoration:'none',color:'grey'}} to="/admin/addProduct">Add Product</Link></li>
-               <li><Link style={{textDecoration:'none',color:'grey'}} to="/admin/manageProduct">Manage products</Link></li>
-               <li><Link style={{textDecoration:'none',color:'grey'}} to="/admin/editProduct">Edit Product</Link></li>
+               <li><i class="bi bi-grid"></i><Link style={{textDecoration:'none',color:'grey'}} to="/admin/addProduct">Add Product</Link></li>
+               <li><i class="bi bi-plus-square"></i><Link style={{textDecoration:'none',color:'grey'}} to="/admin/manageProduct">Manage products</Link></li>
+               <li><i class="bi bi-pencil-square"></i><Link style={{textDecoration:'none',color:'grey'}} to="/admin/editProduct">Edit Product</Link></li>
            </ul>
            </div>
+           <Container>
            <Switch>
                <Route path="/admin/addProduct">
                 <AddProduct></AddProduct>
@@ -28,7 +29,8 @@ const Admin = () => {
                    <EditProduct></EditProduct>
                </Route>
            </Switch>
-        </Container>
+           </Container>
+        </div>
     );
 };
 

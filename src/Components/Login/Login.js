@@ -72,6 +72,7 @@ const Login = () => {
 
   return (
     <Container>
+      <h2>Please log in first</h2>
       <div className="app-authentication my-5">
         <div className="google">
           <Button className="app-btn d-flex align-items-center justify-content-between my-5" onClick={handleGoogleSignIn} variant="info w-100">

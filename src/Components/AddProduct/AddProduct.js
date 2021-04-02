@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container,Row} from "react-bootstrap";
+import { Button, Col, Container,Row} from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
@@ -83,16 +83,18 @@ const AddProduct = () => {
           </Col>
           <Col className="p-3">
             <h4>Add Photo</h4>
+            <i class="bi bi-cloud-arrow-up-fill"></i>
+            <label htmlFor="enterPhoto">upload image</label>
+            
             <input
               name="enterPhoto"
               onChange={handleImageUpload}
               type="file"
-              placeholder="Enter Photo"
             />
           </Col>
         </Row>
         <Row>
-          <Col className="p-3">
+          <Col>
             <h4>Enter product key</h4>
             <input
               name="productKey"

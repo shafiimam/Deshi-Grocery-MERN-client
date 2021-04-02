@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Table } from "react-bootstrap";
+import { Container, Spinner, Table } from "react-bootstrap";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../App";
 
@@ -27,7 +27,13 @@ const Orders = () => {
   }, []);
   return (
     <Container>
-      <h2>Your have {orders.length} orders</h2>
+      {
+        orders.length === 0 ? <Container className="my-5 d-flex align-items-center flex-column">
+        <h1><Spinner className="mr-auto" animation="grow" variant="info" size="lg" /></h1>
+        <h4>Loading Orders</h4>
+    </Container>:
+    <div>
+       <h2>Your have {orders.length} orders</h2>
       <ul>
         <Table bordered striped size="lg" variant="dark" responsive="lg">
           <thead>
@@ -48,6 +54,10 @@ const Orders = () => {
           ))}
         </Table>
       </ul>
+    </div>
+      }
+     
+      
     </Container>
   );
 };
